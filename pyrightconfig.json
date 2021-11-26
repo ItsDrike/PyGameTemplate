@@ -1,0 +1,13 @@
+// pyright linting checker configuration file
+// it is a static type checker for python, on which pylance is built (common for VSCode)
+// it ensures that typing in our code is done properly and that there aren't any conflicts.
+{
+    "exclude": [
+        // Exclude virtual environment, it contains external library code which we don't need to check
+        ".venv",
+        // GitHub validation workflow creates .cache to store pipenv virtual environment
+        ".cache",
+        // Don't run checks on compiled python code
+        "**/__pycache__"
+    ]
+}
