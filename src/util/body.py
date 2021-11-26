@@ -7,9 +7,9 @@ from src.util.descriptor import Coordinate
 from src.util.typing import NumericType
 
 
-class Body(ABC):
+class RectBody(ABC):
     """
-    This is an abstract default class for an interactive body in pygame.
+    This is an abstract default class for a rectangle body in pygame.
 
     This class is expected to be subclassed by a specific type of body
     which will include the needed specific functionality.
@@ -34,7 +34,7 @@ class Body(ABC):
         """Get the rect hitbox of this body."""
         return pygame.Rect(self.x, self.y, self.width, self.height)
 
-    def collides(self, other: "Body") -> bool:
+    def collides(self, other: "RectBody") -> bool:
         """Check if 2 bodies in collision with each other."""
         return all([
             self.hitbox.left < other.hitbox.right and self.hitbox.right > other.hitbox.left,  # X axis collision
@@ -42,9 +42,9 @@ class Body(ABC):
         ])
 
 
-class ControlledBody(Body):
+class ControlledRectBody(RectBody):
     """
-    This is an abstract default class for an interactive controlled body in pygame.
+    This is an abstract default class for a controlled rectangle body in pygame.
 
     This class is expected to be subclassed by a specific type of body
     which will include the needed specific functionality.
