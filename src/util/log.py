@@ -92,23 +92,26 @@ def _set_trace_loggers() -> None:
 
 def setup() -> None:
     """Set up loggers."""
+    # Configure global logging format
+    log_format = logging.Formatter(FORMAT_STRING)
+
     # Add global TRACE level
     logging.TRACE = TRACE_LEVEL  # type: ignore
     logging.addLevelName(TRACE_LEVEL, "TRACE")
     logging.setLoggerClass(CustomLogger)
 
-    # Configure file handler
-    log_format = logging.Formatter(FORMAT_STRING)
-    log_file = Path("logs", "bot.log")
-    log_file.parent.mkdir(exist_ok=True)
-    file_handler = logging.handlers.RotatingFileHandler(log_file, maxBytes=5242880, backupCount=7, encoding="utf8")
-    file_handler.setFormatter(log_format)
-
     # Configure the root logger
     root_log = get_logger()
-    root_log.addHandler(file_handler)
     setup_coloredlogs(FORMAT_STRING, root_log)
     root_log.setLevel(logging.DEBUG if src.config.DEBUG else logging.INFO)
+
+    # Configure file handler (if enabled)
+    if src.config.FILE_LOG:
+        log_file = Path("logs", "game.log")
+        log_file.parent.mkdir(exist_ok=True)
+        file_handler = logging.handlers.RotatingFileHandler(log_file, maxBytes=5242880, backupCount=7, encoding="utf8")
+        file_handler.setFormatter(log_format)
+        root_log.addHandler(file_handler)
 
     # Configure log-levels for other loggers
     logging.getLogger("PIL").setLevel(logging.INFO)
