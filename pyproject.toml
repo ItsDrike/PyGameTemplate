@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "PyGame Template"
+version = "1.0.0"
+description = "Template for PyGame based projects."
+authors = ["ItsDrike <itsdrike@protonmail.com>"]
+license = "GPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pygame = "^2.1.0"
+coloredlogs = "^15.0.1"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.6.0"
+flake8 = "^4.0.1"
+flake8-annotations = "^2.7.0"
+flake8-bugbear = "^21.9.2"
+flake8-docstrings = "^1.6.0"
+flake8-import-order = "^0.18.1"
+flake8-tidy-imports = "^4.5.0"
+flake8-string-format = "^0.3.0"
+pep8-naming = "^0.12.1"
+pre-commit = "^2.15.0"
+ipython = "^7.29.0"
+pip-licenses = "^3.5.3"
+taskipy = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+lint = "pre-commit run --all-files"
+precommit = "pre-commit install"
+license-check = "./scripts/license-check.sh"
