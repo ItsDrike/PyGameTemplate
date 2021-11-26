@@ -3,6 +3,7 @@ from abc import abstractmethod
 import pygame
 from pygame.event import EventType  # type: ignore (see: https://github.com/pygame/pygame/issues/2867)
 
+from src.config import Window
 from src.util.log import get_logger
 
 log = get_logger(__name__)
@@ -17,12 +18,11 @@ class BaseGame:
     and parameters which are useful for every game.
     """
 
-    def __init__(self, width: int, height: int, fps: int) -> None:
-        self.size = self.width, self.height = width, height
+    def __init__(self) -> None:
+        size = Window.width, Window.height
 
-        self.surface = pygame.display.set_mode(self.size)
+        self.surface = pygame.display.set_mode(size)
         self.fps_clock = pygame.time.Clock()
-        self.tick_rate = fps
 
         self.running = True
         self.ended = False
@@ -93,7 +93,7 @@ class BaseGame:
             pygame.display.update()
 
             self.tick()
-            self.fps_clock.tick(self.tick_rate)
+            self.fps_clock.tick(Window.tick_rate)
 
         # Final cleanup
         self.cleanup()
