@@ -245,8 +245,8 @@ def merge(a: list, b: int):
 We may notice that it makes no sense to add a list to a number, a static type checker would immediately detect this,
 and let us know that something is wrong and the types list and int don't support addition like this.
 
-For this project, we use [`pyright`](https://github.com/Microsoft/pyright) as our static type checker (if you use 
-VSCode, it is included in the Pylance extension, which is installed along with the Python extension). But it is 
+For this project, we use [`pyright`](https://github.com/Microsoft/pyright) as our static type checker (if you use
+VSCode, it is included in the Pylance extension, which is installed along with the Python extension). But it is
 important to know that there are alternatives, such as [`mypy`](https://github.com/python/mypy). We've made sure to
 include pyright in the pre-commit checks, which means that pyright will check your code before each commit you make.
 
@@ -391,7 +391,7 @@ def pineapple(a: bool, b: str) -> None:
 
     * a: bool
         This variable is only a placeholder for this very explanation.
-    
+
     However this parameter description syntax should usually be avoided unless there's
     no better way of doing it.
 

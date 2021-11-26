@@ -11,7 +11,7 @@ a pygame based game. It includes a `src.util.base_game.BaseGame` class, which is
 game classes each with it's own logic. This class provides an abstracted way to run the game simply by initializing
 this class and running `game.start` or `game.run_continually`.
 
-To make development very easy, everything in this template has a detailed docstring informing about what given 
+To make development very easy, everything in this template has a detailed docstring informing about what given
 method/class is responsible for and how should it be used. To make things even easier, there is already a pre-made file
 that contains an empty definition of a class which inherits from this BaseGame ready to be used.
 

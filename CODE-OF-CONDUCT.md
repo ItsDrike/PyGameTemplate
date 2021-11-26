@@ -25,7 +25,7 @@ license text so that we can keep everything clean and organized). When you're us
 sure that their license is permissive and allows relicensing or is compatible with our GPL v3 license.
 
 Please note: an online code repository that has no license is presumed to be source-available, but not open sourced
-this means that the only the copyright holder has the rights to use it and should not be used in this code base. A 
+this means that the only the copyright holder has the rights to use it and should not be used in this code base. A
 license is the only way to lift some restrictions of pure copyright which you gain immediately after you've wrote some
 code. All unlicensed code is fully protected by this copyright which means that it can't be re-used in any way, even if
 it is publicly available. If you have some projects without a license, please always make sure to add one so that your
@@ -38,9 +38,9 @@ Plagiarism is the re-use of someone else's work (eg: any code, binary content su
 an article, etc.) without the permission or license right from the author. Claiming someone else's work as your own is
 disrespectful to the author and to your own learning process.
 
-Attempting to add plagiarized content to our code-base will result in us immediately removing that content and you 
-likely being banned from ever contributing to our project again. Not to mention that doing this is illegal in most 
-countries and could lead to lawsuits being filed against you by the true owners of the stolen material. We take 
+Attempting to add plagiarized content to our code-base will result in us immediately removing that content and you
+likely being banned from ever contributing to our project again. Not to mention that doing this is illegal in most
+countries and could lead to lawsuits being filed against you by the true owners of the stolen material. We take
 plagiarism very seriously ad it is important that you always give credit where credit is due.
 
 ## Harassment
