@@ -4,6 +4,7 @@ Applies to:
     - Copyright (c) 2018 Python Discord
       All rights reserved.
         - ./CONTRIBUTING.md: file was inspired by the original creation
+        - ./src/util/log.py: file was inspired by the original creation
 
 Original source code link(s):
   - Python Discord:
