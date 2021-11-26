@@ -5,7 +5,7 @@ from pygame.event import EventType  # type: ignore (see: https://github.com/pyga
 
 from src.util.log import get_logger
 
-log = get_logger()
+log = get_logger(__name__)
 
 
 class BaseGame:

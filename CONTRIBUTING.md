@@ -284,7 +284,7 @@ so instead of the simple example above, what you'll actually see in our code bas
 ```python
 from src.util.log import get_logger
 
-log = get_logger()
+log = get_logger(__name__)
 
 log.debug("This DEBUG log is colored!")
 ```
@@ -296,7 +296,7 @@ on, trace statements can be a lot more verbose and generally only really useful 
 ```python
 from src.util.log import get_logger
 
-log = get_logger()
+log = get_logger(__name__)
 
 log.trace("This is a TRACE level log.")
 ```
